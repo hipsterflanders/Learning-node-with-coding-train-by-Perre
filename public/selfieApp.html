@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Selfie App</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"
+        integrity="sha256-Pg1di+fBF53Rbh9oZR/FeD1xsFzTLC963lcac1D0ias=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="datasending.js" charset="utf-8"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Selfie App - Project Backend Programming</h1>
+    </header>
+    <a href="index.html">Back to the main page</a>
+
+    <div class="content">
+        <form name="Message">
+            <h1>Data Selfie App</h1>
+            <div id='cameraview'></div>
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="fmessage">Message:</label><br>
+            <textarea name="fmessage" id="fmessage" rows="10" cols="30"></textarea><br>
+            <button id="submitMessage" onclick="validateForm()">Send Message</button>
+        </form>
+        <div>
+            <button onclick="getData()">GET DATA</button>
+            <div id="messageHolder" class="messageHolder"></div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

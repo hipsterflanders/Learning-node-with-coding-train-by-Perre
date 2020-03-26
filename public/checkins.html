@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkins</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Leaflet javascript -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+  <script type="text/javascript" src="geolocation.js" charset="utf-8"></script>
+  <script type="text/javascript" src="logs.js" charset="utf-8"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <style>
+    #mapid {
+      height: 500px;
+    }
+  </style>
+  <header>
+    <h1>Checkins</h1>
+  </header>
+  <a href="index.html">Homepage</a>
+  <div id="mapid"></div>
+  <script>
+    checkin();
+  </script>
+  <div class="content">
+    <p>
+      You are at: <span id="lat"></span>°,<span id="lon"></span>° <br>
+      The weather here is <span id="summary"></span> with a temperature of <span id="temperature"></span>&deg;
+      C
+    </p>
+    </div>
+    <button onclick="getData()">Get Logs</button>
+</body>
+
+</html>
