@@ -3,6 +3,7 @@ const fs = require('fs');
 const app = express();
 const Datastore = require('nedb');
 const fetch = require('node-fetch');
+const corona = require('./corona');
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
@@ -21,6 +22,10 @@ app.get('/api', (request, response) => {
         }
         response.json(data);
     });
+});
+
+app.get('/corona', async (request, response) => {
+    response.json(corona.getData());   
 });
 
 app.post('/api', (request, response) => {
